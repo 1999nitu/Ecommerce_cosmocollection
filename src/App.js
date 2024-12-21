@@ -36,7 +36,7 @@ import EditCoupon from './Components/Admin/Coupons/EditCoupon';
 
 import Register from './Components/Auth/Register';
 import Login from './Components/Auth/Login';
-import ApiServices from './Components/ApiServices';
+// import ApiServices from './Components/ApiServices';
 
 import UserViewSubCategory from './Components/User/UserViewSubCategory';
 import UserViewProduct from './Components/User/UserViewProduct';
@@ -53,83 +53,84 @@ import ViewOrderDetails from './Components/Admin/Orders/ViewOrderDetails';
 import UserOrder from './Components/User/UserOrder';
 import AdminLayout from './Components/Admin/Adminpage/AdminLayout';
 import Dashboard from './Components/Admin/Adminpage/Dashboard';
+import AdminHeader from './Components/Admin/Adminpage/AdminHeader';
 
 function App() {
- //npm i react-router-dom
+  //npm i react-router-dom
 
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/' element={<Master/>}>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/mens' element={<Mens/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/womens' element={<Womens/>}/>
+        <Route path='/' element={<Master />}>
+          <Route path='/home' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/mens' element={<Mens />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/womens' element={<Womens />} />
 
-        <Route path='/*' element={<Error/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/userviewsubcategory/:id' element={<UserViewSubCategory/>}/>
-        <Route path='/userviewproduct/:id' element={<UserViewProduct/>}/>
-        <Route path='/userviewproduct' element={<UserViewProduct/>}/>
-        <Route path='/userviewcoupon' element={<UserViewCoupon/>}/>
-        <Route path='/userlogin' element={<UserLogin/>}/>
-        <Route path='/userviewcategory' element={<UserViewCategory/>}/>
-        <Route path='/allcart' element={<AllCart/>} />
-        <Route path='/userorder' element={<UserOrder/>} />
-        </Route>
-      
-
-        <Route path='/admin' element={<AdminLayout/>}>
-
-        <Route path='/admin/addcategory' element={<AddCategory/>}/>
-        <Route path='/admin/managecategory' element={<ManageCategory/>}/>
-        <Route path='/admin/editcategory/:id' element={<EditCategory/>}/>
-        <Route path='/admin/singlecategory/:id' element={<ViewSingleCategory/>}/>
-
-        <Route path='/admin/singlesubcategory/:id' element={<ViewSingleSubCategory/>}/>
-        <Route path='/admin/managesubcategory' element={<ManageSubCategory/>}/>
-        <Route path='/admin/addsubcategory' element={<AddSubCategory/>}/>
-        <Route path='/admin/editsubcategory/:id' element={<EditSubCategory/>}/>
-
-        <Route path='/admin/singleproduct/:id' element={<ViewSingleProduct/>}/>
-        <Route path='/admin/addproduct' element={<AddProduct/>}/>
-        <Route path='/admin/manageproduct' element={<ManageProduct/>}/>
-        <Route path='/admin/editproduct/:id' element={<EditProduct/>}/>
-
-        <Route path='/admin/addcoupon' element={<AddCoupon/>}/>
-        <Route path='/admin/singlecoupon/:id' element={<ViewSingleCoupon/>}/>
-        <Route path='/admin/managecoupon' element={<ManageCoupon/>}/>
-        <Route path='/admin/editcoupon/:id' element={<EditCoupon/>} />
-
-        <Route path='/admin/vieworder' element={<ViewOrder/>}/>
-        <Route path='/admin/updateorder' element={<UpdateOrder/>}/>
-        <Route path='/admin/vieworderdetails' element={<ViewOrderDetails/>}/>
-        <Route path='/admin/adminorder' element={<AdminOrder/>}/>
-
-        <Route path='/admin/adminlayout' element={<AdminLayout/>}/>
-        <Route path='/admin/adminheader' element={<AdminHeader/>}/>
-        <Route path='/admin/dashboard' element={<Dashboard/>}/>
-
-        <Route path='/apiservices' element={<ApiServices/>}/> 
+          <Route path='/*' element={<Error />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/userviewsubcategory/:id' element={<UserViewSubCategory />} />
+          <Route path='/userviewproduct/:id' element={<UserViewProduct />} />
+          <Route path='/userviewproduct' element={<UserViewProduct />} />
+          <Route path='/userviewcoupon' element={<UserViewCoupon />} />
+          <Route path='/userlogin' element={<UserLogin />} />
+          <Route path='/userviewcategory' element={<UserViewCategory />} />
+          <Route path='/allcart' element={<AllCart />} />
+          <Route path='/userorder' element={<UserOrder />} />
         </Route>
 
-        </Routes>
+
+        <Route path='/admin' element={<AdminLayout />}>
+
+          <Route path='/admin/addcategory' element={<AddCategory />} />
+          <Route path='/admin/managecategory' element={<ManageCategory />} />
+          <Route path='/admin/editcategory/:id' element={<EditCategory />} />
+          <Route path='/admin/singlecategory/:id' element={<ViewSingleCategory />} />
+
+          <Route path='/admin/singlesubcategory/:id' element={<ViewSingleSubCategory />} />
+          <Route path='/admin/managesubcategory' element={<ManageSubCategory />} />
+          <Route path='/admin/addsubcategory' element={<AddSubCategory />} />
+          <Route path='/admin/editsubcategory/:id' element={<EditSubCategory />} />
+
+          <Route path='/admin/singleproduct/:id' element={<ViewSingleProduct />} />
+          <Route path='/admin/addproduct' element={<AddProduct />} />
+          <Route path='/admin/manageproduct' element={<ManageProduct />} />
+          <Route path='/admin/editproduct/:id' element={<EditProduct />} />
+
+          <Route path='/admin/addcoupon' element={<AddCoupon />} />
+          <Route path='/admin/singlecoupon/:id' element={<ViewSingleCoupon />} />
+          <Route path='/admin/managecoupon' element={<ManageCoupon />} />
+          <Route path='/admin/editcoupon/:id' element={<EditCoupon />} />
+
+          <Route path='/admin/vieworder' element={<ViewOrder />} />
+          <Route path='/admin/updateorder' element={<UpdateOrder />} />
+          <Route path='/admin/vieworderdetails' element={<ViewOrderDetails />} />
+          <Route path='/admin/adminorder' element={<AdminOrder />} />
+
+          <Route path='/admin/adminlayout' element={<AdminLayout />} />
+          <Route path='/admin/adminheader' element={<AdminHeader />} />
+          <Route path='/admin/dashboard' element={<Dashboard />} />
+
+          {/* <Route path='/apiservices' element={<ApiServices />} /> */}
+        </Route>
+
+      </Routes>
       <ToastContainer
-      position="bottom-left"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark"
-    />
-        </BrowserRouter>
-      );
-    }
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </BrowserRouter>
+  );
+}
 
 export default App;
